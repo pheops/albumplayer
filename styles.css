@@ -1,0 +1,205 @@
+/*
+Hic et Nunc HTML Audio Player HTML Template by ©cryptemes
+
+Version 2.0
+
+Version 1 was programmed for ©stereohopper and released on hicetnunc.xyz as OBJKT#15472 on March 28, 2021
+hicetnunc.xyz/objkt/15472
+
+The audio-files in this template are made by ©stereohopper - twitter.com/stereohopper
+
+
+Copyright March 2021 - twitter.com/cryptemes
+
+We appreciate you getting in touch with us if you use this template for your own project. 
+But you don't have to. 
+However, please leave this Note untouched.
+*/
+*:not(.ui-slider-range) {
+    margin: 0;
+    padding: 0;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    box-sizing: border-box;
+    
+}
+body {
+    background-color: black;
+    font-family: verdana;
+
+}
+
+.CRY_container {
+    margin: 0px;
+}
+.CRY_player {
+    background: url("Cover.jpg") no-repeat #111111;
+    background-size: contain;
+    
+    position: relative;
+    
+    z-index: 2;
+    display: block;
+    overflow: hidden;
+    height:100vmin;
+    width:100vmin;
+    max-width:768px;
+    max-height:768px;
+    
+}
+.BG{
+    height:100vmin;
+    width:100vmin;
+    max-width:768px;
+    max-height:768px;
+    z-index: 0;
+    position: absolute;
+}
+.UIshade{
+    display: block;
+    position: absolute;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.4));
+    width:100vw;
+    height:50vh;
+    bottom:0px;
+}
+
+.title {
+    color: #FFFFFF;
+    font-size: 16px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    position: absolute;
+    bottom: 55px;
+    display: flex;
+    height: 20px;
+    align-self: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.pl {
+    background: transparent url("PlaylistOpen.svg") no-repeat;
+    cursor: pointer;
+    height: 25px;
+    right: 25px;
+    position: absolute;
+    top: 50px;
+    width: 25px;
+}
+.plc {
+    background: transparent url("PlaylistClose.svg") no-repeat;
+    cursor: pointer;
+    height: 25px;
+    right: 25px;
+    position: absolute;
+    top: 22px;
+    width: 25px;
+}
+
+.CRY_controls {
+    cursor: pointer;
+    height: 60px;
+    left: 50%;
+    position: absolute;
+    bottom: 85px;
+    width: 400px;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: safe;
+}
+.CRY_controls .play, .CRY_controls .pause, .CRY_controls .rew, .CRY_controls .fwd {
+    float: left;
+    height: 100%;
+    width: 33%;
+}
+.CRY_controls .play {
+    background: url("Play.svg") no-repeat center;
+}
+.CRY_controls .pause {
+    background: url("Pause.svg") no-repeat center;
+    display: none;
+}
+.CRY_controls .rew {
+    background: url("Back.svg") no-repeat center;
+}
+.CRY_controls .fwd {
+    background: url("Forth.svg") no-repeat center;
+}
+.hidden {
+    display: none;
+}
+.CRY_controls .visible {
+    display: block;
+}
+.timeline{
+    width:90%;
+    height:1px;
+    position: absolute;
+    bottom: 25px;
+    left: 5%;
+}
+.playhead {
+    height: 14px;
+    bottom: 0px;  
+    cursor: pointer;
+}
+.ui-slider {
+    height:10px;
+    background-color: #ffffff33;
+    text-decoration:none;
+    text-align:center;
+    border-radius: 5px;
+    border:none !important;
+}
+.ui-slider-handle {
+    background: url("Timeline_Status.svg") no-repeat !important;
+    height: 14px;
+    width: 14px;
+    bottom: 22px; 
+    text-decoration:none;
+    border:none !important;
+    display:none;
+}
+
+.showpl{
+    right:0px !important;
+}
+
+.playlist {
+    background-color: rgba(0,0,0,0.80);
+    color: white;
+    border-radius: 15px 0px 0px 15px; 
+    margin: 25px 0 0 0;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    position: absolute;
+    width: 300px;
+    z-index: 99;
+    height: 90vmin;
+    max-height:500px;
+    right: -300px;
+}
+.plul{
+     list-style-type: none;
+     margin-top: 50px;
+}
+.plul li {
+    
+    cursor: pointer;
+    margin: 0 0 15px 15px;
+}
+.plul li.active {
+    font-weight: bold;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
